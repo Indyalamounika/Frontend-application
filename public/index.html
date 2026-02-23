@@ -41,7 +41,7 @@
 
 <script>
 async function fetchOrders() {
-  const res = await fetch('http://localhost:5001/orders'); // or your domain
+  const res = await fetch('http://localhost:5000/orders'); // or your domain
   const orders = await res.json();
   const list = document.getElementById('order-list');
   list.innerHTML = orders.map(o => `<li>${o.product_name} - $${o.price}</li>`).join('');
