@@ -33,20 +33,6 @@
 <button onclick="loadOrders()" class="loadorders">Load Orders</button>
 
 <hr>
-  <section>
-  <h2>Orders</h2>
-  <button onclick="fetchOrders()">Load Orders</button>
-  <ul id="order-list"></ul>
-</section>
-
-<script>
-async function fetchOrders() {
-  const res = await fetch('http://localhost:5000/orders'); // or your domain
-  const orders = await res.json();
-  const list = document.getElementById('order-list');
-  list.innerHTML = orders.map(o => `<li>${o.product_name} - $${o.price}</li>`).join('');
-}
-</script>
 
 <pre id="result"></pre>
 
