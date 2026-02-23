@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Indyalamounika/frontendproject.git'
+                    url: 'https://github.com/Indyalamounika/Frontend-application.git'
             }
         }
 
